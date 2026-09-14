@@ -228,7 +228,8 @@ main {
   padding: 0;
   color: #edf0f0;
   font-family: "Cinzel Decorative", Georgia, serif;
-  font-size: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: bolder;
   letter-spacing: 0.16em;
   text-align: center;
 }

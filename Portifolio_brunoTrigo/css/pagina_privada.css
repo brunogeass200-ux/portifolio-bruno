@@ -1,0 +1,55 @@
+
+
+:root {
+    --painel-privado: rgba(7, 13, 19, 0.92);
+    --borda-privada: rgba(230, 173, 40, 0.22);
+}
+
+.container {
+    width: min(1280px, 100%);
+    min-height: calc(100vh - 130px);
+    display: grid;
+    grid-template-columns: minmax(180px, 28%) minmax(0, 1fr);
+    gap: 20px;
+    padding: 24px 5%;
+    margin: 25px auto 0;
+}
+
+.lateral-esquerda,
+.central {
+    min-width: 0;
+    border: 1px solid var(--borda-privada);
+    background: var(--painel-privado);
+    border-radius: 18px;
+}
+
+.lateral-esquerda {
+    min-height: 560px;
+    padding: 24px;
+}
+
+.lateral-esquerda h3 {
+    color: var(--ouro-claro);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.central {
+    min-height: 560px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        display: block;
+        padding: 16px 4%;
+    }
+
+    .lateral-esquerda {
+        display: none;
+    }
+
+    .central {
+        min-height: 540px;
+    }
+}
