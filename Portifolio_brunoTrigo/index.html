@@ -37,6 +37,17 @@
 
     <main>
         <div class="hero-inicial" id="inicio">
+            <div class="hero-modelo" aria-hidden="true">
+                <model-viewer
+                    src="img/fundo3D/planeta_dourado_3d.glb"
+                    alt=""
+                    auto-rotate
+                    camera-controls
+                    disable-zoom
+                    shadow-intensity="1"
+                    exposure="1.15">
+                </model-viewer>
+            </div>
             <p class="saudacao">Olá, eu sou</p>
             <div class="nome-principal">
                 <h1>Bruno <span class="nome-ouro">trigo</span></h1>
@@ -157,5 +168,6 @@
     <script src="java_script/card.js"></script>
     <script src="java_script/FlipCard.js"></script>
     <script src="java_script/menu.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>
 </html>
