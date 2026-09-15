@@ -83,11 +83,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(2, 5, 8, 0.65);
-  border: 1px solid rgba(230, 173, 40, 0.35);
-  border-radius: 40px;
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
+  background: rgba(2, 5, 8, 0);
+  
+  border-radius: 30px;
+  -webkit-backdrop-filter: blur(40%);
+  backdrop-filter: blur(40%);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   z-index: 100;
 }
@@ -108,11 +108,11 @@ main {
 
 .menu a {
   position: relative;
-  padding: 29px 4px 25px;
+  padding: 29px 20px 25px;
   border-radius: 0;
   color: #cdd1d4;
   font-family: "Cinzel Decorative", serif;
-  font-size: 0.48rem;
+  font-size: 0.68rem;
   font-weight: bolder;
   letter-spacing: 0.14em;
   text-decoration: none;
@@ -216,16 +216,19 @@ main {
   z-index: 0;
   content: "";
   background:
-    linear-gradient(90deg, rgba(2, 5, 8, 0.98) 0%, rgba(2, 5, 8, 0.82) 38%, rgba(2, 5, 8, 0.18) 100%),
-    linear-gradient(0deg, rgba(2, 5, 8, 0.7), transparent 58%),
+    linear-gradient(90deg, rgba(2, 5, 8, 0.548) 0%, rgba(2, 5, 8, 0.61) 38%, rgba(2, 5, 8, 0.212) 100%),
+    linear-gradient(0deg, rgba(2, 5, 8, 0.027), transparent 88%),
     url('../img/fundo3D/fundo_planeta_web.jpg') 88% center / cover no-repeat;
+  filter: brightness(2.3);
   opacity: 0.7;
+  border-radius: 28px;
+  
 }
 
 .hero-modelo {
   position: absolute;
   top: 10%;
-  right: -20%;
+  right: 45%;
   bottom: -10%;
   z-index: 0;
   width: 50%;
@@ -234,8 +237,8 @@ main {
 }
 
 .hero-modelo model-viewer {
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 70%;
   cursor: grab;
   --poster-color: transparent;
   filter: saturate(1.15) contrast(1.08) brightness(1.04);
@@ -247,7 +250,7 @@ main {
 
 .hero-inicial > *:not(.hero-modelo) {
   position: relative;
-  z-index: 0;
+  z-index: 1
 }
 
 .hero-inicial::after {
