@@ -203,7 +203,7 @@ main {
   min-height: 450px;
   margin: 40px auto 20px;
   padding: clamp(20px, 3vh, 75px) 6% 70px;
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid rgba(230, 173, 40, 0.25);
   border-radius: 28px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(230, 173, 40, 0.06);
@@ -224,20 +224,21 @@ main {
 
 .hero-modelo {
   position: absolute;
-  top: -7%;
-  right: -3%;
-  bottom: -7%;
+  top: 10%;
+  right: -20%;
+  bottom: -10%;
   z-index: 0;
-  width: 58%;
-  opacity: 0.94;
-  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 28px rgba(230, 173, 40, 0.22));
+  width: 50%;
+  opacity: 1;
+  filter: drop-shadow(0 58px 82px rgba(0, 0, 0, 0.82)) drop-shadow(0 0 30px rgba(230, 173, 40, 0.55));
 }
 
 .hero-modelo model-viewer {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   cursor: grab;
   --poster-color: transparent;
+  filter: saturate(1.15) contrast(1.08) brightness(1.04);
 }
 
 .hero-modelo model-viewer:active {
@@ -246,7 +247,7 @@ main {
 
 .hero-inicial > *:not(.hero-modelo) {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .hero-inicial::after {
