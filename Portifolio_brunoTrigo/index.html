@@ -12,16 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <video class="video-fundo" src="img/video/nebulosa.mp4" autoplay loop muted playsinline>
-        <source src="img/video/nebulosa.mp4" type="video/mp4">
-    </video>
+  
     
     <div class="mascara-video"></div>
 
     <header class="cabecalho">
-        <div class="logo">
-            <img src="img/logo_cabecalho.png" alt="Logo Bruno Trigo">
-        </div>
+        
         <button class="botao-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
             <span></span>
             <span></span>
@@ -31,6 +27,9 @@
             <a href="#inicio">Home</a>
             <a href="#conteudo">Conteúdo</a>
             <a href="html/cadastro.html">cadastro</a>
+        </nav>
+        <nav class="menu" id="menu-principal" aria-label="Menu principal">
+            
             <a href="html/login.html">Login</a>
         </nav>
     </header>
@@ -43,9 +42,9 @@
                     alt=""
                     auto-rotate
                     camera-controls
-                    disable-zoom
+                   
                     camera-orbit="18deg 78deg auto"
-                    rotation-per-second="9deg"
+                    rotation-per-second="15deg"
                     shadow-intensity="1.2"
                     exposure="1.25">
                 </model-viewer>
@@ -171,6 +170,7 @@
     <script src="java_script/card.js"></script>
     <script src="java_script/FlipCard.js"></script>
     <script src="java_script/menu.js"></script>
+    <script src="java_script/tawk.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>
 </html>
