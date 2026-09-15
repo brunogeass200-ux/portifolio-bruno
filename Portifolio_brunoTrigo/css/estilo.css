@@ -203,10 +203,7 @@ main {
   min-height: 450px;
   margin: 40px auto 20px;
   padding: clamp(20px, 3vh, 75px) 6% 70px;
-  background:
-    linear-gradient(90deg, rgba(2, 5, 8, 0.685) 0%, rgba(2, 5, 8, 0.499) 35%, rgba(2, 5, 8, 0) 75%),
-    linear-gradient(0deg, rgb(2, 5, 8) 0%, transparent 43%),
-    url('../img/logo-fundo.jpg') 68% center / cover no-repeat;
+ 
   border: 1px solid rgba(230, 173, 40, 0.25);
   border-radius: 28px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(230, 173, 40, 0.06);
