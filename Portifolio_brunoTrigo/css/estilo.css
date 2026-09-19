@@ -20,7 +20,6 @@ html {
 }
 
 body {
-  width: 100%;
   min-width: 320px;
   min-height: 100vh;
   line-height: 1.6;
@@ -42,7 +41,7 @@ body {
   object-fit: cover;
   z-index: 0;
   pointer-events: none;
-  filter: brightness(0.85);
+  filter: brightness(1.95);
 }
 
 .mascara-video {
@@ -51,7 +50,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle at 50% 35%, rgba(2, 5, 8, 0.147) 0%, rgba(2, 5, 8, 0.344) 100%);
+  background: radial-gradient(circle at 50% 35%, rgba(2, 5, 8, 0.562) 0%, rgba(2, 5, 8, 0.479) 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -60,35 +59,26 @@ main {
   position: relative;
   z-index: 2;
   min-height: 100vh;
-  padding-top: 90px; /* Espaço para o cabeçalho transparente não cobrir o início do conteúdo */
-  overflow: hidden;
-  background: transparent;
+  padding-top: 58px;
+  overflow: visible;
 }
 
 /* =========================================================
    CABEÇALHO & MENU
    ========================================================= */
 .cabecalho {
-  /* ==============================================================
-     OPÇÃO 1 (ATUAL): 'fixed'    -> NÃO ROLA (fica fixo no topo da tela)
-     OPÇÃO 2:         'absolute' -> ROLA JUNTO (sobe e some ao descer)
-     ============================================================== */
-  position: absolute; /* Rola junto com a página (não fica preso no topo) */
-  top: 16px;
+  position: absolute;
+  top: 14px;
   left: 50%;
   transform: translateX(-50%);
-  width: min(90%, 1100px);
-  min-height: 64px;
-  padding: 0 30px;
+  width: min(82%, 980px);
+  min-height: 58px;
+  padding: 0 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(2, 5, 8, 0);
-  
-  border-radius: 30px;
-  -webkit-backdrop-filter: blur(40%);
-  backdrop-filter: blur(40%);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+ 
+ 
   z-index: 100;
 }
 
@@ -101,6 +91,7 @@ main {
 
 .menu {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   gap: clamp(8px, 2.4vw, 38px);
@@ -108,16 +99,15 @@ main {
 
 .menu a {
   position: relative;
-  padding: 29px 20px 25px;
-  border-radius: 0;
+  padding: 20px 14px 18px;
   color: #cdd1d4;
   font-family: "Cinzel Decorative", serif;
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: bolder;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .menu a::after {
@@ -143,17 +133,17 @@ main {
   transform: scaleX(1);
 }
 
-.menu a[href="#login"],
-.menu a[href*="login"] {
-  margin-left: clamp(12px, 2.4vw, 38px);
+.menu a[href*="login"],
+.menu a.link-login-destaque {
+  margin-left: auto;
   padding: 9px 28px;
   border: 1px solid rgba(230, 173, 40, 0.9);
   border-radius: 24px;
   color: var(--ouro-claro);
 }
 
-.menu a[href="#login"]::after,
-.menu a[href*="login"]::after {
+.menu a[href*="login"]::after,
+.menu a.link-login-destaque::after {
   display: none;
 }
 
@@ -199,15 +189,15 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: min(90%, 1000px);
-  min-height: 450px;
-  margin: 40px auto 20px;
-  padding: clamp(20px, 3vh, 75px) 6% 70px;
+  width: min(60%, 980px);
+  min-height: 320px;
+  margin: 50px auto 18px;
+  padding: 14px 4% 18px;
   overflow: visible;
-  border: 1px solid rgba(230, 173, 40, 0.25);
-  border-radius: 28px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(230, 173, 40, 0.06);
+  
 
+  perspective: 1200px;
+ 
 }
 
 .hero-inicial::before {
@@ -215,33 +205,30 @@ main {
   inset: 0;
   z-index: 0;
   content: "";
-  background:
-    linear-gradient(90deg, rgba(2, 5, 8, 0.548) 0%, rgba(2, 5, 8, 0.61) 38%, rgba(2, 5, 8, 0.212) 100%),
-    linear-gradient(0deg, rgba(2, 5, 8, 0.027), transparent 88%),
-    url('../img/fundo3D/fundo_planeta_web.jpg') 88% center / cover no-repeat;
-  filter: brightness(2.3);
-  opacity: 0.7;
-  border-radius: 28px;
-  
+
+
 }
 
 .hero-modelo {
   position: absolute;
-  top: 10%;
-  right: 45%;
-  bottom: -10%;
   z-index: 0;
-  width: 50%;
-  opacity: 1;
-  filter: drop-shadow(0 58px 82px rgba(0, 0, 0, 0.82)) drop-shadow(0 0 30px rgba(230, 173, 40, 0.55));
+  width: min(44%, 420px);
+  height: 200px;
+  top: calc(50% - 100px);
+  left: calc(20% - min(22%, 210px));
+  pointer-events: none;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  will-change: transform;
+  filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 45px rgba(230, 173, 40, 0.353));
+  opacity: 0.72;
 }
 
 .hero-modelo model-viewer {
-  width: 70%;
-  height: 70%;
-  cursor: grab;
-  --poster-color: transparent;
-  filter: saturate(1.15) contrast(1.08) brightness(1.04);
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: scale(1.16);
 }
 
 .hero-modelo model-viewer:active {
@@ -250,7 +237,7 @@ main {
 
 .hero-inicial > *:not(.hero-modelo) {
   position: relative;
-  z-index: 1
+  z-index: 1;
 }
 
 .hero-inicial::after {
@@ -259,6 +246,7 @@ main {
   bottom: 22px;
   left: 5%;
   height: 2px;
+  
   content: "";
   background: linear-gradient(90deg, transparent, rgba(230, 173, 40, 0.48), transparent);
 }
@@ -268,9 +256,9 @@ main {
   padding: 0;
   color: #edf0f0;
   font-family: "Cinzel Decorative", Georgia, serif;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: bolder;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-align: center;
 }
 
@@ -297,7 +285,7 @@ main {
 }
 
 .nome-principal h1 {
-  font-size: clamp(1.4rem, 3vw, 2.8rem);
+  font-size: clamp(1.2rem, 2.6vw, 2.3rem);
   margin: 0;
   line-height: 0.92;
   letter-spacing: 0.02em;
@@ -315,18 +303,18 @@ main {
 .hero-inicial > p {
   text-align: center;
   font-weight: bold;
-  max-width: 560px;
-  padding: 13px 0 11px;
+  max-width: 500px;
+  padding: 10px 0 8px;
   color: #d9dde0;
-  font-size: clamp(0.62rem, 1.05vw, 1rem);
-  letter-spacing: 0.08em;
+  font-size: clamp(0.58rem, 0.9vw, 0.9rem);
+  letter-spacing: 0.07em;
 }
 
 .hero-inicial > .descricao-hero {
   margin-top: 2px;
   font-family: "Lato", Arial, sans-serif;
-  font-size: clamp(0.85rem, 1.3vw, 1rem);
-  line-height: 1.5;
+  font-size: clamp(0.78rem, 1.1vw, 0.95rem);
+  line-height: 1.45;
   letter-spacing: 0.03em;
   text-align: center;
 }
@@ -344,8 +332,8 @@ main {
 
 .icones_languagem li span {
   display: flex;
-  width: 72px;
-  min-height: 75px;
+  width: 62px;
+  min-height: 68px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -355,8 +343,8 @@ main {
 }
 
 .icones_languagem img {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.15));
   transition: opacity 0.3s ease, transform 0.4s ease;
@@ -365,7 +353,7 @@ main {
 .icones_languagem h5 {
   margin-top: 7px;
   color: var(--texto-suave);
-  font-size: 0.42rem;
+  font-size: 0.38rem;
   letter-spacing: 0.08em;
   transition: color 0.2s ease, text-shadow 0.2s ease;
 }
@@ -390,12 +378,12 @@ footer {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 22px 5%;
+  padding: 16px 5%;
   color: var(--ouro);
   border-top: 1px solid rgba(230, 173, 40, 0.2);
   background: rgba(2, 5, 8, 0.88);
-  font-size: 0.52rem;
-  letter-spacing: 0.1em;
+  font-size: 0.44rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -447,7 +435,6 @@ footer {
     bottom: 8px;
   }
 
-  .menu a[href="#login"],
   .menu a[href*="login"] {
     margin: 8px auto;
     width: auto;
@@ -456,16 +443,16 @@ footer {
   .hero-inicial {
     width: 94%;
     margin: 20px auto 10px;
-    min-height: 540px;
-    padding: 60px 5% 65px;
+    min-height: 360px;
+    padding: 32px 5% 38px;
     border-radius: 20px;
-    background-position: 68% center;
   }
 
   .hero-modelo {
-    top: -4%;
-    right: -8%;
-    bottom: -4%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
     width: 108%;
     opacity: 0.5;
   }

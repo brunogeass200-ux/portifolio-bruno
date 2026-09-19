@@ -29,28 +29,26 @@
             <a href="#inicio">Home</a>
             <a href="#conteudo">Conteúdo</a>
             <a href="Portifolio_brunoTrigo/html/cadastro.html">cadastro</a>
-            <a href="Portifolio_brunoTrigo/html/pagina_privada.html">paginaprivadateste</a>
-        </nav>
-        <nav class="menu" id="menu-principal" aria-label="Menu principal">
-            <a href="Portifolio_brunoTrigo/html/login.html">Login</a>
+            <a href="Portifolio_brunoTrigo/html/pagina_privada.html">pagina privada</a>
+            <a class="link-login-destaque" href="Portifolio_brunoTrigo/html/login.html">Login</a>
         </nav>
         
     </header>
 
     <main>
         <div class="hero-inicial" id="inicio">
-            <div class="hero-modelo" aria-hidden="true">
+            <div class="hero-modelo"  id="hero-modelo" aria-hidden="true">
                 <model-viewer
                     src="Portifolio_brunoTrigo/img/fundo3D/planeta_dourado_3d_textura_premium.glb"
                     alt=""
-                    auto-rotate
                     camera-controls
-                    camera-orbit="20deg 75deg auto"
-                    rotation-per-second="12deg"
+                    camera-orbit="0deg 75deg auto"
+                    field-of-view="32deg"
                     shadow-intensity="1"
                     exposure="1.15">
                 </model-viewer>
             </div>
+            
             <p class="saudacao">Olá, eu sou</p>
             <div class="nome-principal">
                 <h1>Bruno <span class="nome-ouro">trigo</span></h1>
@@ -86,6 +84,7 @@
                     </li>
                 </ul>
             </div>
+            
         </div>
 
         <h1 class="nome-ouro">minhas habilidade</h1>
@@ -97,7 +96,7 @@
                 <div class="trilho-cartoes">
 
                     <article class="cartao">
-                    <button class="flip-button" type="button" aria-label="Virar cartão" title="Virar cartão" aria-pressed="false"><img src="img/flip-retro-transparente.png" alt=""></button>
+                    <button class="flip-button" type="button" aria-label="Virar cartão" title="Virar cartão" aria-pressed="false"><img src="Portifolio_brunoTrigo/img/flip-retro-transparente.png" alt=""></button>
                     <div class="conteudo-cartao">
                         <div class="frente-cartao">
                             <img src="Portifolio_brunoTrigo/img/js.png" alt="JavaScript">
@@ -127,7 +126,7 @@
                     </article>
 
                     <article class="cartao">
-                    <button class="flip-button" type="button" aria-label="Virar cartão" title="Virar cartão" aria-pressed="false"><img src="img/flip-retro-transparente.png" alt=""></button>
+                    <button class="flip-button" type="button" aria-label="Virar cartão" title="Virar cartão" aria-pressed="false"><img src="Portifolio_brunoTrigo/img/flip-retro-transparente.png" alt=""></button>
                     <div class="conteudo-cartao">
                         <div class="frente-cartao">
                             <img src="Portifolio_brunoTrigo/img/css3.png" alt="CSS3">
@@ -142,7 +141,7 @@
                     </article>
 
                     <article class="cartao">
-                    <button class="flip-button" type="button" aria-label="Virar cartão" title="Virar cartão" aria-pressed="false"><img src="img/flip-retro-transparente.png" alt=""></button>
+                    <button class="flip-button" type="button" aria-label="Virar cartão" title="Virar cartão" aria-pressed="false"><img src="Portifolio_brunoTrigo/img/flip-retro-transparente.png" alt=""></button>
                     <div class="conteudo-cartao">
                         <div class="frente-cartao">
                             <img src="Portifolio_brunoTrigo/img/python.png" alt="Python">
@@ -172,6 +171,7 @@
     <script src="Portifolio_brunoTrigo/java_script/FlipCard.js"></script>
     <script src="Portifolio_brunoTrigo/java_script/menu.js"></script>
     <script src="Portifolio_brunoTrigo/java_script/tawk.js"></script>
+    <script src="Portifolio_brunoTrigo/java_script/3d.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>
 </html>
